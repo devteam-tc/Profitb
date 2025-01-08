@@ -10,6 +10,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        lightWhite: '#f2f2f2',
       },
     },
   },

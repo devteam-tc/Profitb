@@ -1,0 +1,191 @@
+"use client";
+
+import React from "react";
+import styled from "styled-components";
+import Image from "next/image";
+import bgImage from "../../public/assets/bgimg.png";
+import chartImage from "../../public/assets/chart.png";
+import { FaChevronCircleRight } from "react-icons/fa";
+import Link from "next/link";
+
+// Styled Components
+
+const Container = styled.div`
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  @media (max-width: 992px) {
+    padding: 0 10px;
+  }
+`;
+
+const Title = styled.h1`
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  span {
+    color: #f44336;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    font-size: 35px;
+  }
+  @media (max-width: 992px) {
+    font-size: 30px;
+    text-align: center;
+  }
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+  @media (max-width: 992px) {
+    flex-direction: row; /* Align buttons side by side on mobile */
+    gap: 12px; /* Adjust gap for mobile */
+  }
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+`;
+
+const Button = styled.button`
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+`;
+
+const LinksGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  align-items: center;
+  @media (max-width: 992px) {
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  font-size: 1.125rem;
+  color: #f44336;
+  text-decoration: none;
+  margin-bottom: 12px;
+  &:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 992px) {
+    margin-bottom: 16px; /* Space between links on mobile */
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+`;
+
+const SectionWrapper = styled.div`
+  background-image: url(${bgImage.src});
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  padding: 180px 20px;
+  background-position: 100% 100%;
+  color: #333;
+  @media (max-width: 992px) {
+    padding: 120px 10px; /* Adjust padding for mobile */
+  }
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const LeftColumn = styled.div`
+  width: 100%;
+  text-align: center;
+  @media (min-width: 768px) {
+    width: 50%;
+    text-align: left;
+  }
+`;
+
+const RightColumn = styled.div`
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 511px;
+  height: auto;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+`;
+
+const BannerSection = () => {
+  return (
+    <SectionWrapper>
+      <Container>
+        <ContentWrapper>
+          {/* Left Column */}
+          <LeftColumn>
+            <Title>
+              Simplify Your Business
+              <span> Operations with  Tech Cloud ERP</span>
+            </Title>
+
+            <ButtonGroup>
+              <Button>Lightning-fast GST uploads</Button>
+              <Button>One-click GST reconciliation</Button>
+              <Button>Full control over ITC risks</Button>
+              <Button>Automated ledger generation</Button>
+            </ButtonGroup>
+
+            <LinksGroup>
+              <StyledLink href="/free-trial" className="flex items-center">
+                Start Your Free Trial <FaChevronCircleRight className="ml-2 w-5 h-5" />
+              </StyledLink>
+              <StyledLink href="/request-demo">Request a Demo</StyledLink>
+            </LinksGroup>
+          </LeftColumn>
+
+          {/* Right Column */}
+          <RightColumn>
+            <Image
+              src={chartImage}
+              alt="Tech Cloud Illustration"
+              width={511}
+              height={450}
+              className="max-w-full h-auto"
+            />
+          </RightColumn>
+        </ContentWrapper>
+      </Container>
+    </SectionWrapper>
+  );
+};
+
+export default BannerSection;
