@@ -120,16 +120,16 @@ const RightSection = styled.div`
     display: none;
   }
 `;
-
 const WhatsAppSection = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: black;
 
-  svg {
-    width: 20px;
-    height: 20px;
+  img {
+    width: 30px;
+    height: 30px;
+   
   }
 `;
 
@@ -203,10 +203,21 @@ const Nav = () => {
 
         {/* Right Section */}
         <RightSection>
-          <WhatsAppSection>
-            <FaWhatsapp />
-            <span>080 68103666</span>
-          </WhatsAppSection>
+          {/* WhatsApp Section with Clickable Link */}
+          <Link
+            href="https://api.whatsapp.com/send?phone=+918886606458&text=Hi"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp"
+          >
+            <WhatsAppSection>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+              />
+              <span>8886606458</span>
+            </WhatsAppSection>
+          </Link>
           <Button>Buy Now</Button>
           <Button>Download</Button>
         </RightSection>

@@ -94,21 +94,21 @@ const features = [
     id: 1,
     title: "Effortless Setup, Seamless Usage",
     description:
-      "Profit B empowers small businesses with effortless solutions, intuitive tools, and seamless operations. Focus on growth while we handle the rest.",
+      "Profit b empowers small businesses with effortless solutions, intuitive tools and seamless operations. Focus on growth while we handle the rest.",
     image: "/assets/secure.png",
   },
   {
     id: 2,
     title: "Powerful Reports for Smarter Decisions",
     description:
-      "Empower your small business with insightful, easy-to-understand reports. Make informed decisions, boost profits, and drive growth. Get the clarity you need to take your business to the next level!",
+      "Empower your small business with insightful, easy-to-understand reports. Make informed decisions, boost profits and drive growth. Get the clarity you need to take your business to the next level!",
     image: "/assets/powerful.png",
   },
   {
     id: 3,
     title: "Secure Access to Your Business Anytime, Anywhere",
     description:
-      "Securely access essential tools anytime, anywhere. Boost productivity, protect data, and streamline operations with budget-friendly solutions. Stay connected and grow confidently.",
+      "Securely access essential tools anytime, anywhere. Boost productivity, protect data and streamline operations with budget-friendly solutions. Stay connected and grow confidently.",
     image: "/assets/effortless.png",
   },
 ];

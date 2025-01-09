@@ -30,7 +30,7 @@ const PricingSection = () => {
                 </FeatureItem>
               ))}
             </Features>
-            <ChoosePlanButton>Choose plan</ChoosePlanButton>
+            <ChoosePlanButton>Choose Plan</ChoosePlanButton>
           </PlanCardWrapper>
         ))}
       </PlansContainer>

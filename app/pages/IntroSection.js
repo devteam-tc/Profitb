@@ -21,7 +21,9 @@ export const StyledTitle = styled.h1`
   }
 
   @media (max-width: 992px) {
-    font-size: 2rem; /* Adjust title size for mobile */
+    font-size: 2rem;
+     text-align: left;
+
   }
 
   span {

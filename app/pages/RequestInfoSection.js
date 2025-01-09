@@ -11,11 +11,11 @@ const RequestInfoSection = () => {
       <SubHeading>UPSKILL FOR A BETTER FUTURE</SubHeading>
       <MainHeading>Request More Information</MainHeading>
       <Description>
-        Profit<sup>b</sup>, powered by <Link href="#">Tech Cloud ERP</Link>, Ready to take your business to the next level? With Profit<sup>b</sup>, success is just a step away. Join today and experience seamless growth with our powerful, user-friendly solutions tailored for small businesses. Let's build a brighter future together!
+        Profit<sup>b</sup> powered by <Link href="#">Tech Cloud ERP,</Link> ready to take your business to the next level with Profit<sup>b</sup>, success is just a step away. Join today and experience seamless growth with our powerful, user-friendly solutions tailored for small businesses. Let's build a brighter future together!
       </Description>
       <Button>Contact Us</Button>
       <Paragraph>
-        <span>© {currentYear} Profit<sup>b</sup> All Rights Reserved</span>
+        <span>© {currentYear} Profit<sup>b</sup> All Rights Reserved.</span>
       </Paragraph>
     </SectionWrapper>
   );

@@ -27,6 +27,12 @@ const Title = styled.h1`
     color: #f44336;
     display: block;
   }
+     sup {
+    font-size: 0.6em; /* Smaller font size for superscript */
+    vertical-align: super; /* Align it as superscript */
+    font-weight: bold; /* Optional: you can set weight if needed */
+    color:#05a7cc;
+  }
   @media (min-width: 768px) {
     font-size: 35px;
   }
@@ -58,11 +64,16 @@ const Button = styled.button`
   padding: 8px 16px;
   font-size: 1rem;
   font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+border: 1px solid var(--Color-8-Color-8300, #D3D3D3);
+background: #FFF;
+box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
   transition: all 0.3s;
 
   &:hover {
     background-color: #f5f5f5;
+  }
+     @media (max-width: 992px) {
+    width: 100%; /* Make buttons full-width on mobile */
   }
 `;
 
@@ -82,12 +93,20 @@ const LinksGroup = styled.div`
 
 const StyledLink = styled(Link)`
   font-size: 1.125rem;
-  color: #f44336;
   text-decoration: none;
   margin-bottom: 12px;
+  color: var(--Foundation-techcloud-primary-techcloud-primary-500, #EF5226);
+  font-family: Poppins;
+  font-weight: 500;
+
   &:hover {
     text-decoration: underline;
   }
+
+  &:nth-child(2) {
+    text-decoration: underline; /* Add underline for "Request a Demo" */
+  }
+
   @media (max-width: 992px) {
     margin-bottom: 16px; /* Space between links on mobile */
   }
@@ -95,6 +114,14 @@ const StyledLink = styled(Link)`
     margin-bottom: 0;
     margin-right: 24px;
   }
+`;
+
+const IconWrapper = styled(FaChevronCircleRight)`
+  margin-left: 8px;
+  width: 30px;
+height: 30px;
+  font-size: 1.5rem; /* Increase icon size */
+  vertical-align: middle; /* Align icon with text */
 `;
 
 const SectionWrapper = styled.div`
@@ -152,10 +179,10 @@ const BannerSection = () => {
         <ContentWrapper>
           {/* Left Column */}
           <LeftColumn>
-            <Title>
-              Simplify Your Business
-              <span> Operations with  Tech Cloud ERP</span>
-            </Title>
+          <Title>
+  Simplify Your Business
+  <span> Operations with Profit<sup>b</sup></span>
+</Title>
 
             <ButtonGroup>
               <Button>Lightning-fast GST uploads</Button>
@@ -163,13 +190,13 @@ const BannerSection = () => {
               <Button>Full control over ITC risks</Button>
               <Button>Automated ledger generation</Button>
             </ButtonGroup>
-
             <LinksGroup>
-              <StyledLink href="/free-trial" className="flex items-center">
-                Start Your Free Trial <FaChevronCircleRight className="ml-2 w-5 h-5" />
-              </StyledLink>
-              <StyledLink href="/request-demo">Request a Demo</StyledLink>
-            </LinksGroup>
+  {/* <StyledLink href="/free-trial" className="flex items-center">
+    Start Your Free Trial <IconWrapper />
+  </StyledLink> */}
+  <StyledLink href="/request-demo" className="flex items-center">Request a Demo <IconWrapper /></StyledLink>
+</LinksGroup>
+
           </LeftColumn>
 
           {/* Right Column */}
