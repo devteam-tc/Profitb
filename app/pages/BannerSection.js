@@ -194,6 +194,7 @@ const BannerSection = () => {
   {/* <StyledLink href="/free-trial" className="flex items-center">
     Start Your Free Trial <IconWrapper />
   </StyledLink> */}
+  
   <StyledLink href="/request-demo" className="flex items-center">Request a Demo <IconWrapper /></StyledLink>
 </LinksGroup>
 

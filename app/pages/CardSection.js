@@ -17,7 +17,7 @@ const CardSection = () => {
   }
 
   return (
-    <SectionWrapper>
+    <SectionWrapper  id="modules">
       <Title>Our Integrated Modules</Title> {/* Add the title here */}
       <CardGrid>
         {cards.map((card, index) => (

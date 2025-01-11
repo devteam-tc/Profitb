@@ -7,7 +7,7 @@ import { pricingPlans } from "../utils/constant"; // Import the data
 
 const PricingSection = () => {
   return (
-    <PricingContainer>
+    <PricingContainer id="price-section">
       <Heading>Simple, transparent pricing</Heading>
       <Subheading>No contracts. No surprise fees.</Subheading>
       <PlansContainer>

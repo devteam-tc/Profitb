@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 import styled from "styled-components";
-
+import { Link as ScrollLink } from 'react-scroll';
 import NavLogo from "../../public/assets/logo.png";
 
 // Styled Components
@@ -39,7 +39,7 @@ const Container = styled.div`
   }
 `;
 
-const LogoWrapper = styled.div`
+export const LogoWrapper = styled.div`
   @media (min-width: 1024px) {
     position: static;
     transform: none;
@@ -99,6 +99,10 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
+color: #000;
+font-family: Poppins;
+font-size: 12px;
+font-weight: 500;
   a {
     color: black;
     text-decoration: none;
@@ -125,12 +129,17 @@ const WhatsAppSection = styled.div`
   align-items: center;
   gap: 0.5rem;
   color: black;
-
+span{
+color: #000;
+font-family: Poppins;
+font-weight: 600;
+}
   img {
     width: 30px;
     height: 30px;
    
   }
+
 `;
 
 const Button = styled.button`
@@ -141,7 +150,7 @@ const Button = styled.button`
   font-size: 0.875rem;
   cursor: pointer;
   transition: all 0.3s;
-
+font-weight :600;
   &:hover {
     background-color: #ef5226;
     color: white;
@@ -166,31 +175,56 @@ const Nav = () => {
         {/* Navigation Links */}
         <NavLinks open={open}>
           <NavList>
-            <NavItem>
-              <Link href="/" onClick={handleLinkClick}>
-                Products
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link href="/support" onClick={handleLinkClick}>
-                Support
-              </Link>
-            </NavItem>
+                <NavItem>
+        <ScrollLink
+          to="modules"
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust if the navbar covers the section
+          onClick={handleLinkClick}
+        >
+          Modules
+        </ScrollLink>
+      </NavItem>
+
+      <NavItem>
+        <ScrollLink
+          to="price-section"
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust if the navbar covers the section
+          onClick={handleLinkClick}
+        >
+          Pricing
+        </ScrollLink>
+      </NavItem>
             <NavItem>
               <Link href="/partners" onClick={handleLinkClick}>
                 Partners
               </Link>
             </NavItem>
             <NavItem>
-              <Link href="/resources" onClick={handleLinkClick}>
-                Resources
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link href="/about" onClick={handleLinkClick}>
-                About Us
-              </Link>
-            </NavItem>
+        <ScrollLink
+          to="about-intro"
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust if the navbar covers the section
+          onClick={handleLinkClick}
+        >
+          About Us
+        </ScrollLink>
+      </NavItem>
+      <NavItem>
+        <ScrollLink
+          to="contact-form"
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust if the navbar covers the section
+          onClick={handleLinkClick}
+        >
+          Contact Us
+        </ScrollLink>
+      </NavItem>
           </NavList>
         </NavLinks>
 

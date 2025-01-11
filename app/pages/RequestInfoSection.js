@@ -1,13 +1,22 @@
 "use client";
 
+
 import React from 'react';
+import Image from 'next/image';  
 import styled from 'styled-components';
+import { LogoWrapper } from '../components/Navbar';
+import NavLogo from "../../public/assets/logo.png";
 
 const RequestInfoSection = () => {
-  const currentYear = new Date().getFullYear(); // Get the current year
+  const currentYear = new Date().getFullYear();
 
   return (
     <SectionWrapper>
+      <LogoWrapper>
+        <Link href="/">
+          <Image src={NavLogo} alt="Logo" width={120} height={40} priority />
+        </Link>
+      </LogoWrapper>
       <SubHeading>UPSKILL FOR A BETTER FUTURE</SubHeading>
       <MainHeading>Request More Information</MainHeading>
       <Description>

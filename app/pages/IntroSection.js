@@ -103,7 +103,7 @@ export const StyledImage = styled.img`
 // Profit-b Section Component
 const IntroSection = () => {
   return (
-    <StyledContainer>
+    <StyledContainer  id="about-intro">
       <StyledRow>
         {/* Text Section */}
         <Col lg={6} md={12}>

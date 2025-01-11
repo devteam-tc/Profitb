@@ -6,10 +6,11 @@ import IntroSection from './pages/IntroSection';
 import PricingSection from './pages/PricingSection';
 import RequestInfoSection from './pages/RequestInfoSection';
 import Features from './pages/Features';
+import ContactForm from './pages/ContactForm';
 
 export const metadata = {
-  title: 'Profitᵇ Transform Business Operations Effortlessly',
-  description: 'Simplify business processes with Profitᵇ. Access sales, purchase, finance & accounting, inventory and more. Flexible, secure, and tailored for small businesses.',
+  title: 'Smart Tools for Smarter Business – Discover Profitᵇ Today',
+  description: 'Looking for the best ERP for small business? Profit B delivers smart automation, flexible tools for sales, purchase, inventory, finance, and accounting, along with secure access to help your business grow confidently.',
 };
 
 export default function RootLayout({ children }) {
@@ -29,6 +30,11 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
           rel="stylesheet"
         />
+
+<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
       </head>
       <body>
         <div className="layout-container">
@@ -38,6 +44,7 @@ export default function RootLayout({ children }) {
           <Features />
           <CardSection />
           <PricingSection />
+          <ContactForm />
           <RequestInfoSection />
           <main>{children}</main>
 
