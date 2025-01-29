@@ -8,7 +8,7 @@ import { pricingPlans } from "../utils/constant"; // Import the data
 const PricingSection = () => {
   return (
     <PricingContainer id="price-section">
-      <Heading>Simple, transparent pricing</Heading>
+      <Heading>Simple, Transparent Pricing</Heading>
       <Subheading>No contracts. No surprise fees.</Subheading>
       <PlansContainer>
         {pricingPlans.map((plan, index) => (
@@ -16,11 +16,11 @@ const PricingSection = () => {
             {plan.isHighlighted && (
               <MostPopularBadge>{plan.badge}</MostPopularBadge>
             )}
-            <Price>
+            <Price  className="mt-3 ">
               {plan.price}
               <span>{plan.duration}</span>
             </Price>
-            <PlanTitle>{plan.title}</PlanTitle>
+            <PlanTitle >{plan.title}</PlanTitle>
             <PlanDescription>{plan.description}</PlanDescription>
             <Features>
               {plan.features.map((feature, featureIndex) => (
@@ -30,7 +30,7 @@ const PricingSection = () => {
                 </FeatureItem>
               ))}
             </Features>
-            <ChoosePlanButton>Choose Plan</ChoosePlanButton>
+            <ChoosePlanButton  className="mt-5 mb-5">Choose Plan</ChoosePlanButton>
           </PlanCardWrapper>
         ))}
       </PlansContainer>
@@ -43,17 +43,17 @@ export default PricingSection;
 // Styled Components
 const PricingContainer = styled.div`
   text-align: center;
-  padding: 150px 20px;
+  padding: 180px 20px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/assets/pricingbg.png");
-    background-size: 100% 100%;
+  background-image: url('/assets/pricingbg.webp');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
    @media (max-width: 992px) {
-    padding: 200px 10px;
+    padding: 300px 10px;
   }
 `;
 
@@ -188,7 +188,7 @@ const PlanCardWrapper = styled.div.withConfig({
 })`
   background: #ffffff;
   color: #000000;
-  border-radius: 8px;
+  border-radius: 40px;
   box-shadow: rgba(173, 216, 230, 0.5) 0px 10px 20px,
     rgba(173, 216, 230, 0.7) 0px 6px 6px;
   padding: 20px;

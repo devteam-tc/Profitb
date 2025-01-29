@@ -1,10 +1,13 @@
-// next.config.js
 module.exports = {
-  reactStrictMode: true,  // Recommended to keep this true for better error handling
+  reactStrictMode: true,
   compiler: {
-    styledComponents: true,  // Enables styled-components support in Next.js
+    styledComponents: true,
   },
   devIndicators: {
     appIsrStatus: false,
+  },
+  output: 'export', // Ensures the app is exported statically
+  images: {
+    unoptimized: true, // Optionally, disable image optimization for static export
   },
 };

@@ -1,11 +1,9 @@
+
 "use client";
-
-
 import React from 'react';
 import Image from 'next/image';  
 import styled from 'styled-components';
-import { LogoWrapper } from '../components/Navbar';
-import NavLogo from "../../public/assets/logo.png";
+import NavLogo from "../../public/assets/logo.webp";
 
 const RequestInfoSection = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +12,7 @@ const RequestInfoSection = () => {
     <SectionWrapper>
       <LogoWrapper>
         <Link href="/">
-          <Image src={NavLogo} alt="Logo" width={120} height={40} priority />
+          <Image src={NavLogo} alt="Logo" width={250} height={100} priority />
         </Link>
       </LogoWrapper>
       <SubHeading>UPSKILL FOR A BETTER FUTURE</SubHeading>
@@ -24,7 +22,9 @@ const RequestInfoSection = () => {
       </Description>
       <Button>Contact Us</Button>
       <Paragraph>
-        <span>© {currentYear} Profit<sup>b</sup> All Rights Reserved.</span>
+      <span>
+  © {currentYear} Profit<sup>b</sup> <span style={{ color: '#000' }}>All Rights Reserved.</span>
+</span>
       </Paragraph>
     </SectionWrapper>
   );
@@ -42,6 +42,9 @@ const SectionWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    padding: 40px 10px;  /* Adjusting padding for smaller screens */
+  }
 `;
 
 const SubHeading = styled.h3`
@@ -86,9 +89,15 @@ const Paragraph = styled.p`
   font-size: 14px;
   font-weight: 400;
 
+  span {
+    color: #EF5226; /* Highlight color */
+  }
+
   sup {
     font-size: 0.6em; /* Smaller font size for superscript */
     vertical-align: super; /* Align it as superscript */
+    font-weight: bold; /* Optional: you can set weight if needed */
+    color: #05a7cc;
   }
 `;
 
@@ -114,5 +123,22 @@ const Link = styled.a`
   font-weight: bold;
   &:hover {
     text-decoration: underline;
+  }
+`;
+
+const LogoWrapper = styled.div`
+  /* Default size for larger screens */
+  width: 250px;
+  height: 100px;
+  margin-bottom: 60px; 
+
+  @media (max-width: 992px) {
+   width: 250px;
+  height: 100px;
+  }
+
+  @media (max-width: 480px) {
+    width: 250px;
+  height: 100px;
   }
 `;

@@ -7,7 +7,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 import styled from "styled-components";
 import { Link as ScrollLink } from 'react-scroll';
-import NavLogo from "../../public/assets/logo.png";
+import NavLogo from "../../public/assets/logo.webp";
 
 // Styled Components
 const Header = styled.header`
@@ -15,13 +15,17 @@ const Header = styled.header`
   background: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  // border-radius: 10px;
+  border-bottom: 1px solid var(--borderColor);
+    border-top: 2px solid #ef5226;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 50;
+   @media (max-width: 992px) {
+   border-bottom: 1px solid var(--borderColor);
+    border-top: 2px solid #ef5226;
+  }
 `;
 
 const Container = styled.div`
@@ -66,6 +70,10 @@ const MenuToggle = styled.div`
     transition: all 0.3s ease-in-out;
     right: -21rem; /* Move hamburger menu to the right */
   }
+     @media (max-width: 992px) {
+    
+    right: -19rem; /* Move hamburger menu to the right */
+  }
 `;
 
 
@@ -91,6 +99,8 @@ const NavList = styled.ul`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  cursor : pointer;
+  margin-bottom : 0px !important;
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -124,44 +134,28 @@ const RightSection = styled.div`
     display: none;
   }
 `;
-const WhatsAppSection = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: black;
-span{
-color: #000;
-font-family: Poppins;
-font-weight: 600;
-}
-  img {
-    width: 30px;
-    height: 30px;
-   
-  }
 
-`;
 
 const Button = styled.button`
-  border: 1px solid black;
+  border: 1px solid #fdeee9;
   color: black;
-  padding: 0.5rem 1rem;
+  padding: 6px 12px;
   border-radius: 5px;
   font-size: 0.875rem;
   cursor: pointer;
+   background-color: #ef5226;
+    color: white;
   transition: all 0.3s;
 font-weight :600;
-  &:hover {
-    background-color: #ef5226;
-    color: white;
-  }
+ 
 `;
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
 
   const handleLinkClick = () => {
-    setOpen(false); // Close the hamburger menu when a link is clicked
+    setOpen(false); 
+    window.scrollTo(0, 0); // Close the hamburger menu when a link is clicked
   };
 
   return (
@@ -171,7 +165,12 @@ const Nav = () => {
         <MenuToggle onClick={() => setOpen(!open)} aria-label="Toggle navigation menu" aria-expanded={open}>
           {open ? <FiX /> : <FiMenu />}
         </MenuToggle>
-
+        {/* Logo */}
+        <LogoWrapper>
+        <Link href="/">
+          <Image src={NavLogo} alt="Logo" width={130} height={0} style={{ maxWidth: "100%", height: "auto" }} priority={true} />
+        </Link>
+      </LogoWrapper>
         {/* Navigation Links */}
         <NavLinks open={open}>
           <NavList>
@@ -183,7 +182,7 @@ const Nav = () => {
           offset={-70} // Adjust if the navbar covers the section
           onClick={handleLinkClick}
         >
-          Modules
+          Our Modules
         </ScrollLink>
       </NavItem>
 
@@ -192,23 +191,23 @@ const Nav = () => {
           to="price-section"
           smooth={true}
           duration={500}
-          offset={-70} // Adjust if the navbar covers the section
+          offset={-70} 
           onClick={handleLinkClick}
         >
           Pricing
         </ScrollLink>
       </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <Link href="/partners" onClick={handleLinkClick}>
                 Partners
               </Link>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
         <ScrollLink
           to="about-intro"
           smooth={true}
           duration={500}
-          offset={-70} // Adjust if the navbar covers the section
+          offset={-70} 
           onClick={handleLinkClick}
         >
           About Us
@@ -216,10 +215,21 @@ const Nav = () => {
       </NavItem>
       <NavItem>
         <ScrollLink
+          to="features_section"
+          smooth={true}
+          duration={500}
+          offset={-70} 
+          onClick={handleLinkClick}
+        >
+          Features
+        </ScrollLink>
+      </NavItem>
+      <NavItem>
+        <ScrollLink
           to="contact-form"
           smooth={true}
           duration={500}
-          offset={-70} // Adjust if the navbar covers the section
+          offset={-70} 
           onClick={handleLinkClick}
         >
           Contact Us
@@ -228,33 +238,19 @@ const Nav = () => {
           </NavList>
         </NavLinks>
 
-        {/* Logo */}
-        <LogoWrapper>
-          <Link href="/">
-            <Image src={NavLogo} alt="Logo" width={120} height={40} priority={true} />
-          </Link>
-        </LogoWrapper>
+     
 
         {/* Right Section */}
         <RightSection>
-          {/* WhatsApp Section with Clickable Link */}
-          <Link
-            href="https://api.whatsapp.com/send?phone=+918886606458&text=Hi"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat with us on WhatsApp"
-          >
-            <WhatsAppSection>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                alt="WhatsApp"
-              />
-              <span>8886606458</span>
-            </WhatsAppSection>
-          </Link>
-          <Button>Buy Now</Button>
-          <Button>Download</Button>
-        </RightSection>
+ 
+  {/* <Button>Buy Now</Button> */}
+  
+  <a href="/assets/RankCard.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download Brochure">
+  <Button>Download Flyer</Button>
+</a>
+
+</RightSection>
+
       </Container>
     </Header>
   );

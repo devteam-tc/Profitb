@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { ProfitIntroSection } from "../utils/constant";
 
 // Styled Title Component
-// Styled Title Component
 export const StyledTitle = styled.h1`
   color: #000;
   font-family: Poppins;
@@ -22,8 +21,7 @@ export const StyledTitle = styled.h1`
 
   @media (max-width: 992px) {
     font-size: 2rem;
-     text-align: left;
-
+    text-align: left;
   }
 
   span {
@@ -34,18 +32,16 @@ export const StyledTitle = styled.h1`
     font-size: 0.6em; /* Smaller font size for superscript */
     vertical-align: super; /* Align it as superscript */
     font-weight: bold; /* Optional: you can set weight if needed */
-    color:#05a7cc;
+    color: #05a7cc;
   }
 `;
-
-
 
 // Styled Container Component
 const StyledContainer = styled(Container)`
   padding: 3rem 2rem;
   border-radius: 15px;
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0rem auto;
 
   @media (max-width: 992px) {
     padding: 2rem 1rem; /* Adjust padding for mobile */
@@ -73,10 +69,10 @@ const StyledRow = styled(Row)`
 const StyledDescription = styled.p`
   line-height: 1.8;
   margin-bottom: 1.5rem;
-color: #000;
-font-family: Poppins;
-font-size: 15px;
-font-weight: 400;
+  color: #000;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 400;
 
   @media (max-width: 992px) {
     font-size: 1rem; /* Adjust text size for mobile */
@@ -91,6 +87,7 @@ font-weight: 400;
 export const StyledImage = styled.img`
   max-width: 532px;
   height: auto;
+  width: 100%;
   margin-top: 1rem;
   border-radius: 15px;
 
@@ -103,29 +100,27 @@ export const StyledImage = styled.img`
 // Profit-b Section Component
 const IntroSection = () => {
   return (
-    <StyledContainer  id="about-intro">
+    <StyledContainer id="about-intro">
       <StyledRow>
+          {/* Image Section */}
+          <Col lg={6} md={12} className="text-center">
+          <StyledImage
+            src={ProfitIntroSection.image}
+            alt={ProfitIntroSection.altText}
+          />
+        </Col>
         {/* Text Section */}
         <Col lg={6} md={12}>
-
-
-
-         <StyledTitle>
-  {ProfitIntroSection.title.part1} <span>Profit</span><sup>b</sup>?
-</StyledTitle>
+          <StyledTitle>
+            {ProfitIntroSection.title.part1} <span>Profit</span><sup>b</sup>?
+          </StyledTitle>
 
           {ProfitIntroSection.description.map((text, index) => (
             <StyledDescription key={index}>{text}</StyledDescription>
           ))}
         </Col>
 
-        {/* Image Section */}
-        <Col lg={6} md={12} className="text-center">
-          <StyledImage
-            src={ProfitIntroSection.image}
-            alt={ProfitIntroSection.altText}
-          />
-        </Col>
+      
       </StyledRow>
     </StyledContainer>
   );
