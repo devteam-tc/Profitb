@@ -1,144 +1,49 @@
-
 "use client";
 import React from 'react';
 import Image from 'next/image';  
-import styled from 'styled-components';
 import NavLogo from "../../public/assets/logo.webp";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaPinterest ,  FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const RequestInfoSection = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <SectionWrapper>
-      <LogoWrapper>
-        <Link href="/">
+    <section className="py-12 px-5 text-center bg-white text-gray-800 flex flex-col items-center justify-center max-w-[992px] mx-auto">
+      <div className="w-[250px] h-[100px] mb-16">
+        <a href="/">
           <Image src={NavLogo} alt="Logo" width={250} height={100} priority />
-        </Link>
-      </LogoWrapper>
-      <SubHeading>UPSKILL FOR A BETTER FUTURE</SubHeading>
-      <MainHeading>Request More Information</MainHeading>
-      <Description>
-        Profit<sup>b</sup> powered by <Link href="#">Tech Cloud ERP,</Link> ready to take your business to the next level with Profit<sup>b</sup>, success is just a step away. Join today and experience seamless growth with our powerful, user-friendly solutions tailored for small businesses. Let's build a brighter future together!
-      </Description>
-      <Button>Contact Us</Button>
-      <Paragraph>
-      <span>
-  © {currentYear} Profit<sup>b</sup> <span style={{ color: '#000' }}>All Rights Reserved.</span>
-</span>
-      </Paragraph>
-    </SectionWrapper>
+        </a>
+      </div>
+      <h3 className="text-[#EF5226] uppercase mb-2.5 text-center font-poppins text-[14px] font-normal tracking-[2.8px] md:text-[12px] sm:text-[10px]">
+        UPSKILL FOR A BETTER FUTURE
+      </h3>
+      <h1 className="text-[#EF5226] mb-5 font-poppins text-[40px] font-bold md:text-[30px] sm:text-[25px]">
+        Request More Information
+      </h1>
+      <p className="text-[#0A142F] max-w-2xl mx-auto text-center font-poppins text-[15px] font-normal leading-[33px] md:text-[13px] sm:text-[12px] sm:leading-[28px]">
+        Profit<sup className="text-[#05a7cc] text-[0.6em] font-bold align-super">b</sup> powered by 
+        <a href="#" className="text-[#ff5a00] font-bold hover:underline"> Tech Cloud ERP</a>, ready to take your business to the next level. With Profit<sup className="text-[#05a7cc] text-[0.6em] font-bold align-super">b</sup>, success is just a step away. Join today and experience seamless growth with our powerful, user-friendly solutions tailored for small businesses. Let's build a brighter future together!
+      </p>
+      <div className="mt-5 flex flex-wrap gap-3 justify-center text-[#EF5226] text-sm">
+        <p className="flex items-center gap-2"><FaEnvelope /> contact@profitpowerb.com</p>
+        <p className="flex items-center gap-2"><FaPhoneAlt /> +91 8919439603, +91 7032803200</p>
+      </div>
+      <div className="mt-5 flex gap-3">
+        <a href="https://www.facebook.com/profile.php?id=61572204759827" className="text-black text-2xl transition-colors duration-300 hover:text-[#ef5226]"><FaFacebookF /></a>
+        <a href="https://x.com/Profitpower_b" className="text-black text-2xl transition-colors duration-300 hover:text-[#ef5226]"><FaXTwitter /></a>
+        <a href="#" className="text-black text-2xl transition-colors duration-300 hover:text-[#ef5226]"><FaLinkedinIn /></a>
+        <a href="https://www.instagram.com/profitpowerb/" className="text-black text-2xl transition-colors duration-300 hover:text-[#ef5226]"><FaInstagram /></a>
+        <a href="https://www.youtube.com/@Profitpowerb" className="text-black text-2xl transition-colors duration-300 hover:text-[#ef5226]"><FaYoutube /></a>
+        <a href="https://www.pinterest.com/profitb0167/" className="text-black text-2xl transition-colors duration-300 hover:text-[#ef5226]"><FaPinterest /></a>
+      </div>
+      <p className="mt-5 max-w-2xl mx-auto text-center leading-[1.8] text-black font-poppins text-sm font-normal">
+        <span>
+          © {currentYear} Profit<sup className="text-[#05a7cc] text-[0.6em] font-bold align-super">b</sup> 
+          <span className="text-black">All Rights Reserved.</span>
+        </span>
+      </p>
+    </section>
   );
 };
-
 export default RequestInfoSection;
-
-// Styled Components
-const SectionWrapper = styled.section`
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #fff;
-  color: #2c2c2c;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 768px) {
-    padding: 40px 10px;  /* Adjusting padding for smaller screens */
-  }
-`;
-
-const SubHeading = styled.h3`
-  font-size: 16px;
-  color: #EF5226;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 2.8px;
-`;
-
-const MainHeading = styled.h1`
-  color: #EF5226;
-  margin-bottom: 20px;
-  font-family: Poppins;
-  font-size: 40px;
-  font-weight: 600;
-`;
-
-const Description = styled.p`
-  color: #0A142F;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 33px;
-`;
-
-const Paragraph = styled.p`
-  margin-top: 20px;
-  max-width: 800px;
-  text-align: center;
-  line-height: 1.8;
-  color: #000;
-  font-family: poppins;
-  font-size: 14px;
-  font-weight: 400;
-
-  span {
-    color: #EF5226; /* Highlight color */
-  }
-
-  sup {
-    font-size: 0.6em; /* Smaller font size for superscript */
-    vertical-align: super; /* Align it as superscript */
-    font-weight: bold; /* Optional: you can set weight if needed */
-    color: #05a7cc;
-  }
-`;
-
-const Button = styled.button`
-  background-color: #EF5226;
-  color: #fff;
-  font-size: 18px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.11);
-  border-radius: 30px;
-
-  &:hover {
-    background-color: #ff7043;
-  }
-`;
-
-const Link = styled.a`
-  color: #ff5a00;
-  text-decoration: none;
-  font-weight: bold;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const LogoWrapper = styled.div`
-  /* Default size for larger screens */
-  width: 250px;
-  height: 100px;
-  margin-bottom: 60px; 
-
-  @media (max-width: 992px) {
-   width: 250px;
-  height: 100px;
-  }
-
-  @media (max-width: 480px) {
-    width: 250px;
-  height: 100px;
-  }
-`;

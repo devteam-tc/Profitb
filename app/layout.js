@@ -27,7 +27,13 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content="grow business, best business, start on business, most popular business, best business today" />
         <meta name="keywords" content="data for small businesses, best home based business, grow your business, budget for business, company sign up" />
         <meta name="robots" content="index, follow" />
+        {/* twitter cards  */}
 
+        <meta name="twitter:site" content="@Profitpower_b" />
+        <meta name="twitter:title" content="ProfitPowerB – Powering Your Business Growth" />
+        <meta name="twitter:description" content="Maximize efficiency and boost profitability with ProfitPowerB – your ultimate business growth solution." />
+        <meta name="twitter:image" content="https://profitpowerb.com/_next/static/media/logo.ad893a92.webp" />
+        <meta name="twitter:url" content="https://profitpowerb.com/assets/whyprofitb.webp" />
         <meta name="google-site-verification" content="google2b33fffdbdc7a783" />
         <title>{metadata.title}</title>
         {/* Canonical Link */}

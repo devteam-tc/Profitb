@@ -140,13 +140,13 @@ height: 30px;
 
 const SectionWrapper = styled.div`
   background-image: url('/assets/bgimg.webp');
-  // background-size: cover;
+  background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   background-repeat: no-repeat;
   padding: 250px 20px;
-  // background-position: 100% 100%;
+  background-position: 100% 100%;
   color: #333;
   
   @media (max-width: 1280px) {

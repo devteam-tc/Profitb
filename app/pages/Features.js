@@ -80,7 +80,7 @@ const StyledCol = styled.div.withConfig({
     text-align: center;
 
     h2 {
-      font-size: 25px;
+      font-size: 22px;
     }
 
     p {
