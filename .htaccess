@@ -1,0 +1,47 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # **Scenario 1: Redirect www to non-www**
+  RewriteCond %{HTTPS} on
+  RewriteCond %{HTTP_HOST} ^www\.profitpowerb\.com$ [NC]
+  RewriteRule ^(.*)$ https://profitpowerb.com/$1 [L,R=301]
+  Redirect https://profitpowerb.com/ to https://profitpowerb.com/
+
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+  # Images
+  ExpiresByType image/jpg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+
+  # JavaScript
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # CSS
+  ExpiresByType text/css "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+</IfModule>
+
+# Enable GZIP Compression
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, and XML
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/xml
+  # Ensure that images are not compressed by GZIP
+  SetEnvIf Request_URI \.(?:gif|jpe?g|png|webp)$ no-gzip
+  # Disable gzip for certain files (optional)
+  SetEnvIf Request_URI \.(?:pdf|zip|tar|gz)$ no-gzip
+</IfModule>

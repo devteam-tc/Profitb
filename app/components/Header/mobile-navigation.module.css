@@ -1,0 +1,56 @@
+
+/* ================================ 
+Mobile
+=======================================*/
+.mobile_navigation {
+    position: fixed;
+    z-index: 99;
+    max-height: 100vh;
+    overflow-y: auto;
+    border-top: 2px solid #ef5226;
+  }
+  
+  .backdrop {
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .drawer_content {
+    background-color: white;
+    position: fixed;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    max-width: 280px;
+    height: 115vh;
+    z-index: 100;
+    padding: 10px;
+    overflow-y: auto;
+    transition: 0.5s;
+    transform: translateX(-100%);
+  }
+  
+  .drawer_content.active {
+    transform: translateX(0);
+  }
+  
+  
+  .close_drawer {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Optional: set a background color for better visibility */
+    z-index: 10; /* Ensure it's on top of the other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* Add padding or margin as per your design */
+  }
+  
+  
+  .close_drawer button {
+    padding: 12px;
+    border: none;
+    background-color: white;
+  }

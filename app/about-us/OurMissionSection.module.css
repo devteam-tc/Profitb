@@ -1,0 +1,108 @@
+/* IntroSection.module.css */
+
+.container {
+  /* padding: 3rem 2rem; */
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 2rem 1rem; /* Adjust padding for mobile */
+    max-width: 992px;  /* Ensure the container width doesn't exceed 992px */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem; /* Adjust further for smaller screens */
+  }
+}
+
+/* Row */
+.row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column; /* Stack content vertically for smaller screens */
+    text-align: center;
+  }
+}
+
+/* Title */
+.title {
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title {
+    text-align: left;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.title span {
+  color: #EF5226; /* Highlight color */
+}
+
+.title sup {
+  font-size: 0.6em;
+  vertical-align: super;
+  font-weight: bold;
+  color: #05a7cc;
+}
+
+/* Description */
+.description {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .description {
+    font-size: 1rem; /* Adjust text size for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    text-align: justify; /* Justify text for better mobile readability */
+  }
+}
+
+/* Image */
+.image {
+  max-width: 532px;
+  height: auto;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 15px;
+}
+
+@media (max-width: 992px) {
+  .image {
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+}

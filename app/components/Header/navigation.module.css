@@ -1,0 +1,147 @@
+/* Nav.module.css */
+
+.header {
+  padding: 0.5rem 0;
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);
+  border-bottom: 1px solid var(--borderColor);
+  border-top: 2px solid #ef5226;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1rem;
+    height: 50px;
+  }
+}
+
+.logoWrapper {
+  position: static;
+}
+
+@media (max-width: 1024px) {
+  .logoWrapper {
+    position: absolute;
+    left: 1rem;
+  }
+}
+
+.menuToggle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .menuToggle {
+    display: block;
+    width: 30px;
+    /* height: 24px; */
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    right: -21rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .menuToggle {
+    right: -19rem;
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+}
+
+.navLinks.open {
+  display: block;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 0px !important;
+}
+
+@media (max-width: 1024px) {
+  .navList {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+}
+
+.navItem {
+  color: #000;
+  font-family: Poppins;
+  list-style: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.navItem a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navItem a:hover {
+  color: #ef5226;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .rightSection {
+    display: none;
+  }
+}
+
+.button {
+  border: 1px solid #fdeee9;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background-color: #ef5226;
+  color: white;
+  transition: all 0.3s;
+  font-weight: 600;
+}

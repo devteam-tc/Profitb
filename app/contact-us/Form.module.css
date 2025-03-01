@@ -1,0 +1,146 @@
+/* ContactForm.module.css */
+.container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #A7A7A7;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 20px; /* Adjust padding for mobile */
+  }
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.icon {
+  background-color: #EF5226;
+  color: white;
+  padding: 15px;
+  height: 60px;
+  width: 60px;
+  border-radius: 12%;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #4B1C13;
+}
+
+.details {
+  font-size: 14px;
+  color: #555555;
+  margin-top: 5px;
+}
+
+.form {
+  background-color: #fff;
+  padding: 10%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px;
+}
+
+@media (max-width: 992px) {
+  .form {
+    padding: 5%;
+  }
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.formControl {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.image {
+  width: 75%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 15px;
+}
+
+@media (max-width: 992px) {
+  .image {
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+}
+
+.button {
+  background-color: #EF5226;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #d14620;
+}
+
+@media (max-width: 992px) {
+  .button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+  color: #024656;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  color: #5B1907;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -1.92px;
+}
+
+@media (max-width: 992px) {
+  .subtitle {
+    font-size: 49px;
+  }
+}
+
+.contactCol {
+  background-color: #ef5226;
+  padding: 30px;
+  border-radius: 0px 20px 20px 0px;
+}

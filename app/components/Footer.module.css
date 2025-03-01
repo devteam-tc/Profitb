@@ -1,0 +1,97 @@
+.section {
+  padding: 3rem 1.25rem;
+  text-align: center;
+  background-color: white;
+  color: #0A142F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  width: 250px;
+  height: 100px;
+  margin-bottom: 4rem;
+}
+
+.heading {
+  color: #EF5226;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 2.8px;
+}
+.supText {
+  color: #05a7cc;
+  font-size: 0.6em;
+  font-weight: bold;
+  vertical-align: super;
+}
+.techCloudERPLink {
+  color: #ef5226 !important;
+  font-weight: bold;
+  text-decoration: underline !important;
+}
+
+
+
+.mainTitle {
+  color: #EF5226;
+  margin-bottom: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.description {
+  color: #0A142F;
+  max-width: 42rem;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 33px;
+}
+
+.contactDetails {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  color: #EF5226;
+  font-size: 14px;
+}
+
+.socialIcons {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialIcons a {
+  color: black;
+  font-size: 1.5rem;
+  /* transition: color 0.3s; */
+}
+
+.socialIcons a:hover {
+  color: #ef5226 !important;
+}
+
+.footerText {
+  margin-top: 1.25rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
